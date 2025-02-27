@@ -47,7 +47,7 @@
     "COULD_NOT_GET_PROVIDER": "Could not get provider for the current user.",
     "WARNING_SERVER_TIME_ZONE_MISMATCH": "The server timezone ({{serverTime}}) is different from your browser's time/timezone ({{localeTimeZone}}). This can cause some data or reports to appear incorrect. Please contact the administrator for further assistance.",
     "LOGIN_PAGE_HEADER_TEXT": "LifeRythem EMR LOGIN",
-    "LOGIN_PAGE_TITLE_TEXT": "TITLE TEXT",
+    "LOGIN_PAGE_TITLE_TEXT": "LifeRythem EMR",
     "LOGIN_LOCATION_PAGE_TITLE_TEXT": "Select login location",
     "LOGIN_UNSUPPORTED_BROWSER_KEY": "Bahmni is supported on Chrome/Firefox Browser",
     "DOB_LABEL": "Date of Birth",
