@@ -25,7 +25,7 @@ angular.module('bahmni.common.uiHelper')
                  console.log(state.data);
                  if (state.data && state.data.backLinks) {
                      backlinkService.setUrls(state.data.backLinks);
-                     console.log("Backlink URL",state.data);
+                     console.log(state.data);
                      $scope.backLinks = backlinkService.getAllUrls();
                  }
              });
