@@ -22,11 +22,11 @@ angular.module('bahmni.common.uiHelper')
          controller: function ($scope, backlinkService) {
              $scope.backLinks = backlinkService.getAllUrls();
              $scope.$on('$stateChangeSuccess', function (event, state) {
-             console.log("Backlink URL",state.data)
+             console.log("Backlink URL",state.data);
 
                  if (state.data && state.data.backLinks) {
                      backlinkService.setUrls(state.data.backLinks);
-                     console.log("Backlink URL",state.data)
+                     console.log("Backlink URL",state.data);
                      $scope.backLinks = backlinkService.getAllUrls();
                  }
              });
