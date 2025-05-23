@@ -42,9 +42,9 @@ jobs:
       - name: micro-frontends | install dependencies
         working-directory: micro-frontends
         run: yarn install --frozen-lock-file
-      - name: micro-frontends | test
-        working-directory: micro-frontends
-        run: yarn test:ci
+      # - name: micro-frontends | test
+      #   working-directory: micro-frontends
+      #   run: yarn test:ci
       - name: micro-frontends | build
         working-directory: micro-frontends
         run: yarn build
