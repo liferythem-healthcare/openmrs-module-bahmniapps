@@ -11,7 +11,7 @@ describe("otCalendarSurgicalAppointment", function () {
     beforeEach(module('bahmni.ot', function ($provide) {
         mockAppDescriptor = jasmine.createSpyObj('appDescriptor', ['getConfig','getConfigValue', 'formatUrl']);
         mockAppDescriptor.getConfigValue.and.returnValue({
-            link: "/bahmni/clinical/#/default/patient/{{patientUuid}}/dashboard"
+            link: "/healthnet/clinical/#/default/patient/{{patientUuid}}/dashboard"
         });
         mockAppDescriptor.formatUrl.and.returnValue("formattedUrl");
         mockAppService = jasmine.createSpyObj('appService', ['getAppDescriptor']);

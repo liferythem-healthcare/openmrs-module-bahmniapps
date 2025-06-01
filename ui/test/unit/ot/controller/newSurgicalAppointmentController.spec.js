@@ -367,7 +367,7 @@ describe("newSurgicalAppointmentController", function () {
 
     it("should open the patient program dashboard when user click on patient name in edit mode", function () {
         getAppDescriptor.getConfigValue.and.returnValue({
-            link : "/bahmni/clinical/#/programs/patient/{{patientUuid}}/dashboard?dateEnrolled={{dateEnrolled}}&programUuid={{programUuid}}&enrollment={{enrollment}}&currentTab=DASHBOARD_TAB_GENERAL_KEY"
+            link : "/healthnet/clinical/#/programs/patient/{{patientUuid}}/dashboard?dateEnrolled={{dateEnrolled}}&programUuid={{programUuid}}&enrollment={{enrollment}}&currentTab=DASHBOARD_TAB_GENERAL_KEY"
         });
         getAppDescriptor.formatUrl.and.returnValue("formattedUrl");
         programHelper.groupPrograms.and.returnValue({activePrograms : [enrollmentInfo]});
@@ -379,13 +379,13 @@ describe("newSurgicalAppointmentController", function () {
         scope.goToForwardUrl();
         expect(scope.enrollmentInfo).toBe(enrollmentInfo);
         expect(getAppDescriptor.getConfigValue).toHaveBeenCalledWith('patientDashboardUrl');
-        expect(getAppDescriptor.formatUrl).toHaveBeenCalledWith("/bahmni/clinical/#/programs/patient/{{patientUuid}}/dashboard?dateEnrolled={{dateEnrolled}}&programUuid={{programUuid}}&enrollment={{enrollment}}&currentTab=DASHBOARD_TAB_GENERAL_KEY", jasmine.any(Object));
+        expect(getAppDescriptor.formatUrl).toHaveBeenCalledWith("/healthnet/clinical/#/programs/patient/{{patientUuid}}/dashboard?dateEnrolled={{dateEnrolled}}&programUuid={{programUuid}}&enrollment={{enrollment}}&currentTab=DASHBOARD_TAB_GENERAL_KEY", jasmine.any(Object));
         expect(_window.open).toHaveBeenCalledWith("formattedUrl");
     });
 
     it("should open the patient clinical dashboard when user click on patient name in edit mode", function () {
         getAppDescriptor.getConfigValue.and.returnValue({
-            link : "/bahmni/clinical/#/default/patient/{{patientUuid}}/dashboard"
+            link : "/healthnet/clinical/#/default/patient/{{patientUuid}}/dashboard"
         });
         getAppDescriptor.formatUrl.and.returnValue("formattedUrl");
         scope.patient = { uuid: "patientUuid", display: "patient-GAN2020" };
@@ -393,13 +393,13 @@ describe("newSurgicalAppointmentController", function () {
         createController();
         scope.goToForwardUrl();
         expect(getAppDescriptor.getConfigValue).toHaveBeenCalledWith('patientDashboardUrl');
-        expect(getAppDescriptor.formatUrl).toHaveBeenCalledWith("/bahmni/clinical/#/default/patient/{{patientUuid}}/dashboard", jasmine.any(Object));
+        expect(getAppDescriptor.formatUrl).toHaveBeenCalledWith("/healthnet/clinical/#/default/patient/{{patientUuid}}/dashboard", jasmine.any(Object));
         expect(_window.open).toHaveBeenCalledWith("formattedUrl");
     });
 
     it("should throw error when the forward url configured for the patient is invalid, all the required params are not present on the scope", function () {
         var forwardUrl = {
-            link : "/bahmni/clinical/#/programs/patient/{{patientUuid}}/dashboard?dateEnrolled={{dateEnrolled}}&programUuid={{programUuid}}&enrollment={{enrollment}}&currentTab=DASHBOARD_TAB_GENERAL_KEY",
+            link : "/healthnet/clinical/#/programs/patient/{{patientUuid}}/dashboard?dateEnrolled={{dateEnrolled}}&programUuid={{programUuid}}&enrollment={{enrollment}}&currentTab=DASHBOARD_TAB_GENERAL_KEY",
             errorMessage: "Configured forward url is invalid"
         };
         getAppDescriptor.getConfigValue.and.returnValue(forwardUrl);

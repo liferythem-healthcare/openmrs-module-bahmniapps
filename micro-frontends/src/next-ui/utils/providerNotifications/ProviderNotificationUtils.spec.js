@@ -185,7 +185,7 @@ describe("getPatientIPDDashboardUrl", () => {
     const patientUuid = 'patient123';
     const visitUuid = 'visit123';
 
-    const expectedUrl = `/bahmni/clinical/index.html#/default/patient/${patientUuid}/dashboard/visit/ipd/${visitUuid}?source=clinical`;
+    const expectedUrl = `/healthnet/clinical/index.html#/default/patient/${patientUuid}/dashboard/visit/ipd/${visitUuid}?source=clinical`;
 
     const result = getPatientIPDDashboardUrl(patientUuid, visitUuid);
 
