@@ -11,14 +11,10 @@ angular.module('bahmni.adt')
                     $window.location = appService.getAppDescriptor().formatUrl(Bahmni.ADT.Constants.mfeIpdDashboardUrl, options, true);
                     console.log("IPD URL:", Bahmni.ADT.Constants.ipdDashboardUrl);
                     console.log("MFE IPD URL:", Bahmni.ADT.Constants.mfeIpdDashboardUrl);
-
-
                 } else {
                     $window.location = appService.getAppDescriptor().formatUrl(Bahmni.ADT.Constants.ipdDashboardUrl, options, true);
                     console.log("IPD URL:", Bahmni.ADT.Constants.ipdDashboardUrl);
                     console.log("MFE IPD URL:", Bahmni.ADT.Constants.mfeIpdDashboardUrl);
-
-
                 }
             };
             $scope.searchText = '';
