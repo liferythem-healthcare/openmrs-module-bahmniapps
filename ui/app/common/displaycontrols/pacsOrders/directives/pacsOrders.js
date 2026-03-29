@@ -6,7 +6,7 @@ angular.module('bahmni.common.displaycontrol.pacsOrders')
             var controller = function ($scope) {
                 $scope.orderTypeUuid = orderTypeService.getOrderTypeUuid($scope.orderType);
                 // const radiologyImageUrl = $scope.section.pacsStudyUrl || "/oviyam2/viewer.html?patientID={{patientID}}&studyUID={{studyUID}}";
-                const radiologyImageUrl = $scope.config.pacsStudyUrl || "/ohif/viewer?StudyInstanceUIDs={{studyUID}}";
+                const radiologyImageUrl = $scope.config.pacsStudyUrl || "http://178.236.185.39:3005/viewer?StudyInstanceUIDs={{studyUID}}";
                 var includeAllObs = true;
                 var getOrders = function () {
                     var params = {
